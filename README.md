@@ -95,3 +95,45 @@ This database is intended to provide initial information only and is not a subst
 ---
 
 **Disclaimer**: The information in this database is for informational purposes only and does not constitute medical advice. Do not use this information to diagnose or treat any medical condition without consulting a qualified physician.
+
+---
+
+## Content Generation Prompt
+
+The content for each medical procedure in this database is generated using a specific prompt. This prompt ensures consistency and comprehensiveness across all entries. Here are the key aspects of the content generation process:
+
+### Outputs Generated for Each Procedure
+
+1. **ProcedureBody (HTML)**: The main content of the article in HTML format.
+2. **ProcedurePreview**: A brief description of the procedure.
+3. **ProcedureHeader**: A short title for the procedure.
+
+### ProcedureBody (HTML) Guidelines
+
+- Content is surrounded by `<div class="procedure-content"></div>`.
+- Various HTML structures are used, including:
+  - Short paragraphs (`<p class="procedure-para">`)
+  - Unordered lists (`<ul class="procedure-ul">` with `<li class="procedure-li">`)
+  - Ordered lists (`<ol class="procedure-ol">` with `<li class="procedure-li">`)
+  - Subheadings (`<h3 class="procedure-head">`)
+- Information covers the procedure's purpose, steps, benefits, risks, and recovery process.
+- Maximum length: 500 tokens.
+
+### ProcedurePreview Guidelines
+
+- Concise summary in plain text.
+- Highlights key aspects or benefits.
+- Maximum length: 140 characters.
+- Presents information confidently and factually.
+
+### ProcedureHeader Guidelines
+
+- Exactly matches the name of the procedure.
+
+### Additional Notes
+
+- Hebrew procedure names are not translated to English.
+- The content aims to be factually accurate and relevant to general medical practice.
+- The prompt ensures a consistent structure across all procedure entries while allowing for detailed and informative content.
+
+This approach to content generation helps maintain the quality and uniformity of the information provided in the database, ensuring it remains a valuable resource for users seeking information on orthopedic procedures.
